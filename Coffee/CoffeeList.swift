@@ -2,9 +2,16 @@ import SwiftUI
 
 struct CoffeeList: View {
     var body: some View {
-        List {
-            ForEach(CoffeeType.allCases, id: \.title) { type in
-                CoffeeRowView(coffeeType: type)
+        VStack(alignment: .leading, spacing: 0) {
+            Text("Coffee List")
+                .font(.title)
+                .bold()
+                .padding()
+
+            List {
+                ForEach(CoffeeType.allCases, id: \.title) { type in
+                    CoffeeRowView(coffeeType: type)
+                }
             }
         }
     }

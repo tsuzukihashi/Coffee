@@ -100,4 +100,33 @@ enum CoffeeType: CaseIterable {
             return .init("coffee12_espresso")
         }
     }
+
+    var rating: Int {
+        switch self {
+        case .blend:
+            return 5
+        case .american:
+            return 4
+        case .cafeole:
+            return 3
+        case .blendBlack:
+            return 5
+        case .cappuccino:
+            return 3
+        case .cafelatte:
+            return 4
+        case .cafeMacchiato:
+            return 2
+        case .cafeMocha:
+            return 2
+        case .caramelMacchiato:
+            return 4
+        case .icedCoffee:
+            return 5
+        case .icedMilkCoffee:
+            return 2
+        case .espresso:
+            return 5   
+        }
+    }
 }

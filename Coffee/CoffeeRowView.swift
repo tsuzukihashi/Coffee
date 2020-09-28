@@ -3,6 +3,7 @@ import SwiftUI
 struct CoffeeRowView: View {
     let coffeeType: CoffeeType
     let size: CGFloat = 88
+    @State var showFavorite: Bool = false
 
     var body: some View {
         HStack {
@@ -17,9 +18,22 @@ struct CoffeeRowView: View {
                     .font(.headline)
                 Text(coffeeType.description)
                     .font(.subheadline)
+
+                if showFavorite {
+                    FavoriteView(count: coffeeType.rating)
+                }
             }
 
         }
+    }
+}
+
+struct CoffeeRowContent: LibraryContentProvider {
+    @LibraryContentBuilder
+    var views: [LibraryItem] {
+        LibraryItem(
+            CoffeeRowView(coffeeType: .american)
+        )
     }
 }
 
@@ -29,7 +43,6 @@ struct CoffeeRowView_Previews: PreviewProvider {
             CoffeeRowView(coffeeType: .blend)
             CoffeeRowView(coffeeType: .caramelMacchiato)
         }
-        .frame(width: 334, alignment: .leading)
         .padding(.horizontal)
         .previewLayout(.sizeThatFits)
     }

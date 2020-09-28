@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40264F8E252242B100500577 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40264F8D252242B100500577 /* FavoriteView.swift */; };
 		AAD7EF572518F7E5009754C6 /* CoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EF562518F7E5009754C6 /* CoffeeApp.swift */; };
 		AAD7EF592518F7E5009754C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EF582518F7E5009754C6 /* ContentView.swift */; };
 		AAD7EF5B2518F7EA009754C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD7EF5A2518F7EA009754C6 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40264F8D252242B100500577 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		AAD7EF532518F7E5009754C6 /* Coffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD7EF562518F7E5009754C6 /* CoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeApp.swift; sourceTree = "<group>"; };
 		AAD7EF582518F7E5009754C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				AAD7EF842518FD76009754C6 /* CoffeeRowView.swift */,
 				AAD7EF912519039B009754C6 /* CoffeeList.swift */,
 				AAD7EF892518FD97009754C6 /* CoffeeType.swift */,
+				40264F8D252242B100500577 /* FavoriteView.swift */,
 				AAD7EF5A2518F7EA009754C6 /* Assets.xcassets */,
 				AAD7EF5F2518F7EA009754C6 /* Info.plist */,
 				AAD7EF5C2518F7EA009754C6 /* Preview Content */,
@@ -272,6 +275,7 @@
 				AAD7EF8A2518FD97009754C6 /* CoffeeType.swift in Sources */,
 				AAD7EF922519039B009754C6 /* CoffeeList.swift in Sources */,
 				AAD7EF852518FD76009754C6 /* CoffeeRowView.swift in Sources */,
+				40264F8E252242B100500577 /* FavoriteView.swift in Sources */,
 				AAD7EF572518F7E5009754C6 /* CoffeeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
