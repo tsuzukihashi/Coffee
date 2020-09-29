@@ -10,7 +10,7 @@ struct CoffeeList: View {
 
             List {
                 ForEach(CoffeeType.allCases, id: \.title) { type in
-                    CoffeeRowView(coffeeType: type)
+                    CoffeeRowView(coffeeType: type, showFavorite: true)
                 }
             }
         }

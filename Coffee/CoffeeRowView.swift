@@ -29,10 +29,26 @@ struct CoffeeRowView: View {
 }
 
 struct CoffeeRowContent: LibraryContentProvider {
-    @LibraryContentBuilder
     var views: [LibraryItem] {
         LibraryItem(
-            CoffeeRowView(coffeeType: .american)
+            CoffeeRowView(coffeeType: .american),
+            title: "Coffee Row effect",
+            category: .effect
+        )
+        LibraryItem(
+            CoffeeRowView(coffeeType: .american, showFavorite: true),
+            title: "Coffee Row layout",
+            category: .layout
+        )
+        LibraryItem(
+            CoffeeRowView(coffeeType: .american, showFavorite: true),
+            title: "Coffee Row control",
+            category: .control
+        )
+        LibraryItem(
+            CoffeeRowView(coffeeType: .american, showFavorite: true),
+            title: "Coffee Row other",
+            category: .other
         )
     }
 }
