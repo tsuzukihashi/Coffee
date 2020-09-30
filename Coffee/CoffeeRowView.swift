@@ -28,6 +28,15 @@ struct CoffeeRowView: View {
     }
 }
 
+extension Image {
+    func resizedToFill(width: CGFloat, height: CGFloat) -> some View {
+        self
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: width, height: height)
+    }
+}
+
 struct CoffeeRowContent: LibraryContentProvider {
     var views: [LibraryItem] {
         LibraryItem(
@@ -48,6 +57,30 @@ struct CoffeeRowContent: LibraryContentProvider {
         LibraryItem(
             CoffeeRowView(coffeeType: .american, showFavorite: true),
             title: "Coffee Row other",
+            category: .other
+        )
+    }
+
+    @LibraryContentBuilder
+    func modifiers(base: Image) -> [LibraryItem] {
+        LibraryItem(
+            base.resizedToFill(width: 100, height: 100),
+            title: "resizedToFill effect",
+            category: .effect
+        )
+        LibraryItem(
+            base.resizedToFill(width: 100, height: 100),
+            title: "resizedToFill layout",
+            category: .layout
+        )
+        LibraryItem(
+            base.resizedToFill(width: 100, height: 100),
+            title: "resizedToFill control",
+            category: .control
+        )
+        LibraryItem(
+            base.resizedToFill(width: 100, height: 100),
+            title: "resizedToFill other",
             category: .other
         )
     }
