@@ -5,12 +5,14 @@ struct CoffeeRowView: View {
     let size: CGFloat = 88
     @State var showFavorite: Bool = false
 
+    @ViewBuilder
     var body: some View {
         HStack {
             coffeeType.image
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: size, height: size)
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .frame(width: size, height: size)
+                .resizedToFill(width: size, height: size)
                 .background(Color.gray.opacity(0.3))
                 .clipShape(RoundedRectangle(cornerRadius: 16))
             VStack(alignment: .leading) {
@@ -38,6 +40,7 @@ extension Image {
 }
 
 struct CoffeeRowContent: LibraryContentProvider {
+    @LibraryContentBuilder
     var views: [LibraryItem] {
         LibraryItem(
             CoffeeRowView(coffeeType: .american),
@@ -49,16 +52,6 @@ struct CoffeeRowContent: LibraryContentProvider {
             title: "Coffee Row layout",
             category: .layout
         )
-        LibraryItem(
-            CoffeeRowView(coffeeType: .american, showFavorite: true),
-            title: "Coffee Row control",
-            category: .control
-        )
-        LibraryItem(
-            CoffeeRowView(coffeeType: .american, showFavorite: true),
-            title: "Coffee Row other",
-            category: .other
-        )
     }
 
     @LibraryContentBuilder
@@ -67,21 +60,6 @@ struct CoffeeRowContent: LibraryContentProvider {
             base.resizedToFill(width: 100, height: 100),
             title: "resizedToFill effect",
             category: .effect
-        )
-        LibraryItem(
-            base.resizedToFill(width: 100, height: 100),
-            title: "resizedToFill layout",
-            category: .layout
-        )
-        LibraryItem(
-            base.resizedToFill(width: 100, height: 100),
-            title: "resizedToFill control",
-            category: .control
-        )
-        LibraryItem(
-            base.resizedToFill(width: 100, height: 100),
-            title: "resizedToFill other",
-            category: .other
         )
     }
 }
