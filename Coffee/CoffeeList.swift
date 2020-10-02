@@ -1,6 +1,9 @@
 import SwiftUI
+import NeumorphismUI
 
 struct CoffeeList: View {
+    @EnvironmentObject var neumorphism: NeumorphismManager
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Coffee List")

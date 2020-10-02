@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400FFE842526B16800CA6492 /* NeumorphismUI in Frameworks */ = {isa = PBXBuildFile; productRef = 400FFE832526B16800CA6492 /* NeumorphismUI */; };
 		40264F8E252242B100500577 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40264F8D252242B100500577 /* FavoriteView.swift */; };
 		AAD7EF572518F7E5009754C6 /* CoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EF562518F7E5009754C6 /* CoffeeApp.swift */; };
 		AAD7EF592518F7E5009754C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7EF582518F7E5009754C6 /* ContentView.swift */; };
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				400FFE842526B16800CA6492 /* NeumorphismUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +160,9 @@
 			dependencies = (
 			);
 			name = Coffee;
+			packageProductDependencies = (
+				400FFE832526B16800CA6492 /* NeumorphismUI */,
+			);
 			productName = Coffee;
 			productReference = AAD7EF532518F7E5009754C6 /* Coffee.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +234,9 @@
 				Base,
 			);
 			mainGroup = AAD7EF4A2518F7E5009754C6;
+			packageReferences = (
+				400FFE822526B16800CA6492 /* XCRemoteSwiftPackageReference "NeumorphismUI" */,
+			);
 			productRefGroup = AAD7EF542518F7E5009754C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -596,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		400FFE822526B16800CA6492 /* XCRemoteSwiftPackageReference "NeumorphismUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tsuzukihashi/NeumorphismUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		400FFE832526B16800CA6492 /* NeumorphismUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 400FFE822526B16800CA6492 /* XCRemoteSwiftPackageReference "NeumorphismUI" */;
+			productName = NeumorphismUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AAD7EF4B2518F7E5009754C6 /* Project object */;
 }
